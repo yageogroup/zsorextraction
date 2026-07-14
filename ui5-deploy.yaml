@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: zsorextraction
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: YAGEO_DEV_040
+          url: http://yas4erpdevhttp:44380
+          client: '040'
+        app:
+          name: ZSOREXTRACTION
+          description: Sales order Extraction
+          package: z001
+          transport: DEVK9A2H62
+        exclude:
+          - /test/

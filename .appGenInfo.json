@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Jun 10 2026 16:21:13 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://yas4erpdevhttp:44380/sap/opu/odata4/sap/zui_zsor_req/srvd/sap/zsd_zsor_req/0001/",
+    "appName": "zsorextraction",
+    "appTitle": "Customer PO Extract",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.25.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZP_ZSOR_HDR"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "_Items"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```",
+    "valueHelpDownloaded": true
+  }
+}

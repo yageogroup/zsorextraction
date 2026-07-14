@@ -1,0 +1,182 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "zsorextraction",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.25.0",
+      "toolsId": "cbb1f8a1-14ec-4e11-85cd-21217ca4e9a1"
+    },
+    "dataSources": {
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      },
+      "mainService": {
+        "uri": "/sap/opu/odata4/sap/zui_zsor_req/srvd/sap/zsd_zsor_req/0001/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "annotation"
+          ],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zsorextraction.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+   "resources": {
+    "css": [
+        {
+            "uri": "css/style.css"
+        }
+    ]
+},
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ZP_ZSOR_HDRList",
+          "target": "ZP_ZSOR_HDRList"
+        },
+        {
+          "pattern": "ZP_ZSOR_HDR({key}):?query:",
+          "name": "ZP_ZSOR_HDRObjectPage",
+          "target": "ZP_ZSOR_HDRObjectPage"
+        }
+      ],
+      "targets": {
+        "ZP_ZSOR_HDRList": {
+          "type": "Component",
+          "id": "ZP_ZSOR_HDRList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/ZP_ZSOR_HDR",
+              "variantManagement": "Page",
+              "navigation": {
+                "ZP_ZSOR_HDR": {
+                  "detail": {
+                    "route": "ZP_ZSOR_HDRObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  },
+                  "actions": {
+                    "uploadFile": {
+                      "press": "zsorextraction.ext.controller.Upload.uploadHandler",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "AI Extraction"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ZP_ZSOR_HDRObjectPage": {
+          "type": "Component",
+          "id": "ZP_ZSOR_HDRObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/ZP_ZSOR_HDR",
+              "navigation": {},
+              "content": {
+                "header": {
+                  "actions": {
+                    "viewfile": {
+                      "press": "zsorextraction.ext.controller.Viewfilehandler.viewfilehandler",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "View File"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
+  }
+}

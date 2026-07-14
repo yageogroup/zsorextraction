@@ -1,0 +1,273 @@
+
+
+/* Extracted Delivery Date */
+body.gr-split-active [id$='Reqdelvydat-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* sales organization */
+body.gr-split-active [id$='Vkorg-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+/* Distribution Channel */
+body.gr-split-active [id$='Vtweg-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Division */
+body.gr-split-active [id$='Spart-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+/* Sales Document Type */
+body.gr-split-active [id$='Auart-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Extracted Customer Reference */
+body.gr-split-active [id$='Bstkd-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Extracted Contract */
+body.gr-split-active [id$='Contract-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* NameAg */
+body.gr-split-active [id$='Nameag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* StreetAg*/
+body.gr-split-active [id$='Streetag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* PostalCodeAG*/
+body.gr-split-active [id$='Postcodeag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* CityAG*/
+body.gr-split-active [id$='City1ag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* housenumAG*/
+body.gr-split-active [id$='Housenumag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* countryAG*/
+body.gr-split-active [id$='Countryag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* NameWe */
+body.gr-split-active [id$='Namewe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* StreetWe*/
+body.gr-split-active [id$='Streetwe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* PostalCodeWe*/
+body.gr-split-active [id$='Postcodewe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* CityWe*/
+body.gr-split-active [id$='City1we-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* housenumWe*/
+body.gr-split-active [id$='Housenumwe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* countryWe*/
+body.gr-split-active [id$='Countrywe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Ship to party*/
+body.gr-split-active [id$='Kunwe-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Sold to party*/
+body.gr-split-active [id$='Kunag-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+
+/* Net Amount*/
+body.gr-split-active [id$='NetAmount-label-bdi'] {
+    background-color: rgba(0,112,177,0.20) !important;
+    border: 1.5px solid rgba(0,112,177,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #0070b1 !important;
+    font-weight: bold !important;
+}
+/* Material */
+body.gr-split-active .sapMLabel[title="Material Number"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
+
+body.gr-split-active .sapMLabel[title="Material Number Used by Customer"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
+
+body.gr-split-active .sapMLabel[title="Unit Price Extracted from Purchase Order Item"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
+body.gr-split-active .sapMLabel[title="Net Value of the Document Item in Document Currency"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
+/* Requested Quantity */
+body.gr-split-active .sapMLabel[title="Requested Quantity"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
+
+/* Requested Delivery Date */
+body.gr-split-active .sapMLabel[title="Requested Delivery Date"] bdi {
+    background-color: rgba(255,140,0,0.20) !important;
+    border: 1.5px solid rgba(255,140,0,0.85) !important;
+    border-radius: 2px !important;
+    padding: 0 3px !important;
+    color: #FF8C00 !important;
+    font-weight: bold !important;
+}
