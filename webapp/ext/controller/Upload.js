@@ -19,18 +19,64 @@ sap.ui.define([
 ) {
     "use strict";
 
+    const ALLOWED_EXT = ["pdf", "xls", "xlsx"];
+
+    const MIME_BY_EXT = {
+        pdf:  "application/pdf",
+        xls:  "application/vnd.ms-excel",
+        xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    };
+
+    const INVALID_TYPE_MSG =
+        "Only PDF or Excel files (.pdf, .xls, .xlsx) are allowed.";
+
     return {
         _pDialog: null,
         _oFile: null,
 
+        _getExtension: function (oFile) {
+            if (!oFile || !oFile.name || oFile.name.indexOf(".") === -1) {
+                return "";
+            }
+            return oFile.name.split(".").pop().toLowerCase();
+        },
+
+        _isAllowedFile: function (oFile) {
+            return ALLOWED_EXT.includes(this._getExtension(oFile));
+        },
+
+        _getMimeType: function (oFile) {
+            // Some browsers return an empty type for .xls, so fall back to the extension
+            return oFile.type || MIME_BY_EXT[this._getExtension(oFile)] || "";
+        },
+
         uploadHandler: function (oContext, aSelectedContexts) {
+
+            this._oFile = null;
 
             let oFileUploader = new FileUploader({
                 width: "100%",
-                placeholder: "Choose file",
+                placeholder: "Choose file (PDF or Excel)",
+                fileType: ALLOWED_EXT,
+                typeMissmatch: function (oEvent) {
+                    this._oFile = null;
+                    oEvent.getSource().clear();
+                    MessageBox.error(
+                        "File type '" + oEvent.getParameter("fileType") +
+                        "' is not supported. " + INVALID_TYPE_MSG
+                    );
+                }.bind(this),
                 change: function (oEvent) {
                     let oFiles = oEvent.getParameter("files");
-                    this._oFile = oFiles && oFiles.length > 0 ? oFiles[0] : null;
+                    let oFile = oFiles && oFiles.length > 0 ? oFiles[0] : null;
+
+                    if (oFile && !this._isAllowedFile(oFile)) {
+                        this._oFile = null;
+                        oEvent.getSource().clear();
+                        MessageBox.error(INVALID_TYPE_MSG);
+                        return;
+                    }
+                    this._oFile = oFile;
                 }.bind(this)
             });
 
@@ -54,6 +100,11 @@ sap.ui.define([
                             return;
                         }
 
+                        if (!this._isAllowedFile(this._oFile)) {
+                            MessageBox.error(INVALID_TYPE_MSG);
+                            return;
+                        }
+
                         const oReader = new FileReader();
 
                         oReader.onload = function (e) {
@@ -70,8 +121,8 @@ sap.ui.define([
 
                             let parameters = [];
                             parameters.push({ name: "file_name",    value: this._oFile.name });
-                            parameters.push({ name: "mime_type",    value: this._oFile.type });
-                            parameters.push({ name: "file_content", value: sBase64          });
+                            parameters.push({ name: "mime_type",    value: this._getMimeType(this._oFile) });
+                            parameters.push({ name: "file_content", value: sBase64 });
 
                             const oActionContext = this._controller
                                 .getExtensionAPI()
@@ -115,7 +166,12 @@ sap.ui.define([
                         this._oFile = null;
                         this._pDialog.close();
                     }.bind(this)
-                })
+                }),
+
+                afterClose: function () {
+                    this._pDialog.destroy();
+                    this._pDialog = null;
+                }.bind(this)
             });
 
             this._pDialog.open();
